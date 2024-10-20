@@ -5,7 +5,7 @@ a = Analysis(
     ['aprs.py'],
     pathex=[],
     binaries=[],
-    datas=[],
+    datas=[('C:\\Python\\Python312\\Lib\\site-packages\\pyfiglet\\fonts\\*', 'pyfiglet/fonts')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

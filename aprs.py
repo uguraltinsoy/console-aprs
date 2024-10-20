@@ -1,4 +1,5 @@
 from dotenv import load_dotenv
+import pyfiglet
 import threading
 import os
 import socket
@@ -160,6 +161,9 @@ def stop_aprs():
 
 while True:
     os.system('cls' if os.name == 'nt' else 'clear')
+    ascii_art = pyfiglet.figlet_format("DESK APRS")
+    print(ascii_art, end="")
+    print("Developer by Uğur ALTINSOY")
     print("1. Start APRS")
     print("2. Create Database")
     print("3. Delete Database")
