@@ -132,10 +132,13 @@ def loopSharePos():
     elapsed_time = INTERVAL
     while not stop_flag:
         if elapsed_time >= INTERVAL:
-            os.system('cls' if os.name == 'nt' else 'clear')
-            sendAprsPosition(SERVER, CALLSIGN, SSID, PASSCODE, LAT, LON, SYMBOL_TABLE, SYMBOL, COMMENT)
-            print("Press 'q' + 'enter' to stop APRS.")
-            elapsed_time = 0
+            try:
+                os.system('cls' if os.name == 'nt' else 'clear')
+                sendAprsPosition(SERVER, CALLSIGN, SSID, PASSCODE, LAT, LON, SYMBOL_TABLE, SYMBOL, COMMENT)
+                print("Press 'q' + 'enter' to stop APRS.")
+                elapsed_time = 0
+            except:
+                print("Package could not be sent")
         time.sleep(1)
         elapsed_time += 1
 
@@ -163,7 +166,7 @@ while True:
     os.system('cls' if os.name == 'nt' else 'clear')
     ascii_art = pyfiglet.figlet_format("DESK APRS")
     print(ascii_art, end="")
-    print("Developer by Uğur ALTINSOY")
+    print("Developer by TA2DMX")
     print("1. Start APRS")
     print("2. Create Database")
     print("3. Delete Database")
