@@ -163,7 +163,7 @@ while True:
     os.system('cls' if os.name == 'nt' else 'clear')
     ascii_art = pyfiglet.figlet_format("DESK APRS")
     print(ascii_art, end="")
-    print("Developer by Uğur ALTINSOY")
+    print("Developer by TA2DMX")
     print("1. Start APRS")
     print("2. Create Database")
     print("3. Delete Database")
